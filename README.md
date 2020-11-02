@@ -27,21 +27,36 @@ as the latest working directory.
    plugins=(zsh-cwd)
    ```
 
+3. Add the `cwd` command to the end of you `~/.zshrc` file:
+  ```sh
+  echo "cwd" >> ~/.zshrc
+  ```
+
 ## antigen
 
 If you use [antigen](https://github.com/zsh-users/antigen) as a plugin manager for zsh, all you have to do is to put the following in your `.zshrc`:
 
-```
-antigen bundle pjvds/zsh-cwd
-```
+1. Add the `zsh-cwd` as a bundle to you antigen configuration (usually inside `~/zshrc`):
+   ```sh
+   antigen bundle pjvds/zsh-cwd
+   ```
+2. After your `antigen apply`, add the `cwd` command to change your working directory to the latest when opening a new shell:
+   ```
+   echo "cmd" >> ~/.zshrc
+   ```
 
 ## zplug
 
 If you use [zlplug](https://github.com/zplug/zplug) as a plugin manager for zsh, all you have to do is to put the following in your `.zshrc`:
 
-```
-zplug "pjvds/zsh-cwd"
-```
+1. Add the `zsh-cwd` to you zplug configuration (usually inside `~/zshrc`):
+  ```sh
+   zplug "pjvds/zsh-cwd"
+  ```
+2. Atfer your `zplug load`, add the `cwd` command to change your working directory when opening a new shell:
+   ```sh
+   echo "cmd" >> ~/.zshrc
+   ```
 
 ## Manual
 
@@ -50,4 +65,5 @@ Otherwise, to install it manually execute the following lines you shell:
 ```
 git clone https://github.com/pjvds/zsh-cwd ~/.zsh-cwd
 echo "source ~/.zsh-cwd/zsh-cwd.plugin.zsh" >> ~/.zshrc
+echo "cwd" >> ~/.zshrc
 ```
