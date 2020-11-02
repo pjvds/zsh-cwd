@@ -7,6 +7,13 @@ function cwd::record {
   pwd > $cwd
 }
 
+function cwd::cd {
+  if [ -f $cwd ];
+  then
+    cd $(cat $cwd)
+  fi
+}
+
 function cwd::init {
   chpwd_functions=(${chpwd_functions[@]} cwd::record_cwd)
 }
