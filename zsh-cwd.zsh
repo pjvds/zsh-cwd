@@ -23,6 +23,15 @@ function _cwd::cd {
   cd $cwd
 }
 
-function _cwd::init {
+function _cwd::hook {
   chpwd_functions=(${chpwd_functions[@]} _cwd::record)
 }
+
+function _cwd::unhook {
+  chpwd_functions=(${chpwd_functions:#_cwd::record})
+}
+
+function _cwd::init {
+  _cwd::hook
+}
+
