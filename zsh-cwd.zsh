@@ -1,19 +1,18 @@
 emulate -L zsh
 
-local -a cmd
-cwd=${ZSH_CWD_LOCATION:-$HOME/.cwd}
-
-function cwd::record {
-  pwd > $cwd
+function _cwd::record {
+  local state=${ZSH_CWD_LOCATION:-$HOME/.cwd}
+  pwd > "$state"
 }
 
-function cwd::cd {
-  if [ -f $cwd ];
+function _cwd::cd {
+  local state=${ZSH_CWD_LOCATION:-$HOME/.cwd}
+  if [ -f $state ];
   then
-    cd $(cat $cwd)
+    cd $(cat "$state")
   fi
 }
 
-function cwd::init {
-  chpwd_functions=(${chpwd_functions[@]} cwd::record_cwd)
+function _cwd::init {
+  chpwd_functions=(${chpwd_functions[@]} _cwd::record)
 }
