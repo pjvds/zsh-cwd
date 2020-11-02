@@ -2,6 +2,17 @@
 
 `zsh-cwd` records directory changes in all shells and lets you change to the latest working directory.
 
+# Usage
+
+As you change directory the path will be stored in a state file (default `~/.cwd`). You can use `cwd` to
+change the current working directory to the latest state.
+
+This allows you to open a new terminal at the last known working directory.
+
+To force a directory path to be written to the state you can use `rwd`. This can be helpful if you have 
+recently changed directory somewhere but now want to make sure the current working directory is recorded 
+as the latest working directory.
+
 # Installation
 
 ## oh-my-zsh
