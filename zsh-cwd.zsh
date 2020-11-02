@@ -9,10 +9,18 @@ function _cwd::record {
 
 function _cwd::cd {
   local state=${ZSH_CWD_LOCATION:-$HOME/.cwd}
-  if [ -f $state ];
+  if [ ! -f $state ];
   then
-    cd $(cat "$state")
+    return 1
   fi
+
+  local cwd=$(cat "$state")
+  if [ ! -d $cwd ];
+  then
+    return 2
+  fi
+
+  cd $cwd
 }
 
 function _cwd::init {
