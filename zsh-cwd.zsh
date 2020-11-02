@@ -16,3 +16,5 @@ function _cwd::cd {
 function _cwd::init {
   chpwd_functions=(${chpwd_functions[@]} _cwd::record)
 }
+
+_cwd::init
