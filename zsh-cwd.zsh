@@ -1,4 +1,6 @@
 emulate -L zsh
+alias cwd="_cwd::cd"
+alias rwd="_cwd::record"
 
 function _cwd::record {
   local state=${ZSH_CWD_LOCATION:-$HOME/.cwd}
