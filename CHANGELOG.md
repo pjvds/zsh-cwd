@@ -2,6 +2,51 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## 1.0.0 - 2020-11-03
+
+
+### Bug Fixes
+
+4a9d48 - do not fail on missing directory - Pieter Joost
+
+
+### Refactoring
+
+b639f6 - move initialization to plugin file - Pieter Joost
+
+1fc4b6 - prefix functions with underscore - Pieter Joost
+
+
+### Documentation
+
+e88095 - improve instation information - Pieter Joost
+
+5eed38 - add usage information - Pieter Joost
+
+d1c1d6 - add README documentation - Pieter Joost
+
+
+### Features
+
+810791 - add hook and unhook functions - Pieter Joost
+
+60ef0a - add cd and record aliases - Pieter Joost
+
+16b85b - initialize on source - Pieter Joost
+
+90cb01 - make antigen compatible - Pieter Joost
+
+0cec9b - add ability to change to last known directory - Pieter Joost
+
+c1a970 - record directory on directory changes - Pieter Joost
+
+
+### Miscellaneous Chores
+
+fb69bb - 1.0.0-beta.1 - Pieter Joost
+
+
+- - -
 ## 1.0.0-beta.1 - 2020-11-02
 
 
