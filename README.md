@@ -18,45 +18,45 @@ as the latest working directory.
 ## oh-my-zsh
 
 1. Clone this repository into $ZSH_CUSTOM/plugins (by default ~/.oh-my-zsh/custom/plugins)
-   ```sh
-   git clone https://github.com/pjvds/zsh-cwd ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-cwd
-   ```
+```sh
+git clone https://github.com/pjvds/zsh-cwd ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-cwd
+```
 
 2. Add the plugin to the list of plugin for Oh My Zsh to load (inside `~/.zshrc`):
-   ```sh
-   plugins=(zsh-cwd)
-   ```
+```sh
+plugins=(zsh-cwd)
+```
 
 3. Add the `cwd` command to the end of you `~/.zshrc` file:
-  ```sh
-  echo "cwd" >> ~/.zshrc
-  ```
+```sh
+echo "cwd" >> ~/.zshrc
+```
 
 ## antigen
 
 If you use [antigen](https://github.com/zsh-users/antigen) as a plugin manager for zsh, all you have to do is to put the following in your `.zshrc`:
 
 1. Add the `zsh-cwd` as a bundle to you antigen configuration (usually inside `~/zshrc`):
-   ```sh
-   antigen bundle pjvds/zsh-cwd
-   ```
+```sh
+antigen bundle pjvds/zsh-cwd
+```
 2. After your `antigen apply`, add the `cwd` command to change your working directory to the latest when opening a new shell:
-   ```
-   echo "cmd" >> ~/.zshrc
-   ```
+```
+echo "cmd" >> ~/.zshrc
+```
 
 ## zplug
 
 If you use [zlplug](https://github.com/zplug/zplug) as a plugin manager for zsh, all you have to do is to put the following in your `.zshrc`:
 
 1. Add the `zsh-cwd` to you zplug configuration (usually inside `~/zshrc`):
-  ```sh
-   zplug "pjvds/zsh-cwd"
-  ```
+```sh
+ zplug "pjvds/zsh-cwd"
+```
 2. Atfer your `zplug load`, add the `cwd` command to change your working directory when opening a new shell:
-   ```sh
-   echo "cmd" >> ~/.zshrc
-   ```
+```sh
+echo "cmd" >> ~/.zshrc
+```
 
 ## Manual
 
