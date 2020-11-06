@@ -1,28 +1,34 @@
+#!/bin/zsh
 emulate -L zsh
 alias cwd="_cwd::cd"
 alias rwd="_cwd::record"
 
-readonly no_state=1
-readonly dir_gone=2
+readonly NO_STATE=1
+readonly DIR_GONE=2
+
+function _cwd::loc_state
+{
+  echo "${ZSH_CWD_LOCATION:-$HOME/.cwd}"
+}
 
 function _cwd::set_state
 {
-  local state=${ZSH_CWD_LOCATION:-$HOME/.cwd}
+  local state="$(_cwd::loc_state)"
   echo "$1" > "$state"
 }
 
 function _cwd::get_state
 {
-  local state=${ZSH_CWD_LOCATION:-$HOME/.cwd}
-  if [ ! -f $state ];
+  local loc="$(_cwd::loc_state)"
+  if [ ! -f $loc ]; 
   then
-    return $no_state
+    return $NO_STATE
   fi
 
-  local wd=$(cat "$state")
+  local wd=$(cat "$loc")
   if [ ! -d $wd ];
   then
-    return $dir_gone
+    return $DIR_GONE
   fi
 
   echo "$wd"
