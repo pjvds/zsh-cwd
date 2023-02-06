@@ -50,7 +50,10 @@ function _cwd::cd
 
 function _cwd::hook 
 {
-  chpwd_functions=(${chpwd_functions[@]} _cwd::record)
+  # record directory changes
+  add-zsh-hook chpwd _cwd::record
+  # change to last known working directory
+  _cwd::cd
 }
 
 function _cwd::unhook 
@@ -58,7 +61,7 @@ function _cwd::unhook
   chpwd_functions=(${chpwd_functions:#_cwd::record})
 }
 
-function _cwd::init 
+function _cwd::init
 {
   _cwd::hook
 }
