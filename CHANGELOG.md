@@ -2,6 +2,25 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [1.0.1](https://github.com/pjvds/zsh-cwd/compare/1.0.0..1.0.1) - 2023-02-07
+#### Bug Fixes
+- current working directory not always loaded - ([bd775cf](https://github.com/pjvds/zsh-cwd/commit/bd775cfbd658ee4ccb0f832aff876258c41bf0e4)) - [@pjvds](https://github.com/pjvds)
+#### Documentation
+- add cog config for links in changelog - ([492aa7d](https://github.com/pjvds/zsh-cwd/commit/492aa7d53bea605d92533a28e42ac613758fc3f8)) - Pieter Joost
+- shorten zplug installation instructions - ([43917e2](https://github.com/pjvds/zsh-cwd/commit/43917e2db6ccc3180cc7124942d530bf4580a9a6)) - Pieter Joost
+#### Miscellaneous Chores
+- ignore zinit cache - ([cb054ab](https://github.com/pjvds/zsh-cwd/commit/cb054abcf22acee1b858a26f9f45bf29398f77be)) - [@pjvds](https://github.com/pjvds)
+- update changelog configuration to support latest version of cocogitto - ([cd4b4bc](https://github.com/pjvds/zsh-cwd/commit/cd4b4bc093dc3f560038e15b7dc40646dc24adfd)) - [@pjvds](https://github.com/pjvds)
+#### Refactoring
+- cleaner code with explicit responsibilities and no duplicates - ([30f1991](https://github.com/pjvds/zsh-cwd/commit/30f1991c0000060d95f0f53fc815991e7766fdb6)) - Pieter Joost
+- remove code duplicates and name return values - ([c24e794](https://github.com/pjvds/zsh-cwd/commit/c24e79488ca706eaa91e90e6038394190b44f71c)) - Pieter Joost
+#### Style
+- fix styling in README - ([e083a84](https://github.com/pjvds/zsh-cwd/commit/e083a84e30227d09255384fc6fe4da78f73a6e81)) - Pieter Joost
+#### Tests
+- add tests for state storage - ([7247f9f](https://github.com/pjvds/zsh-cwd/commit/7247f9f3d1062404f1d87e8f921bc8387303c73c)) - Pieter Joost
+
+- - -
+
 ## 1.0.0 - 2020-11-03
 
 
