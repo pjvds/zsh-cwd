@@ -1,7 +1,17 @@
-github = "https://github.com/pjvds/zsh-cwd"
-changelog_path = "CHANGELOG.md"
+from_latest_tag = false
+ignore_merge_commits = false
+branch_whitelist = []
 pre_bump_hooks = []
 post_bump_hooks = []
-authors = []
+pre_package_bump_hooks = []
+post_package_bump_hooks = []
 
-[commit_types]
+[changelog]
+path = "CHANGELOG.md"
+template = "remote"
+remote = "github.com"
+repository = "zsh-cwd"
+owner = "pjvds"
+authors = [
+  { username = "pjvds", signature = "Pieter Joost van de Sande"}
+]
