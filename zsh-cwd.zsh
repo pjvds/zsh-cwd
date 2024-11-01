@@ -50,10 +50,11 @@ function _cwd::cd
 
 function _cwd::hook 
 {
-  # record directory changes
-  add-zsh-hook chpwd _cwd::record
   # change to last known working directory
   _cwd::cd
+
+  # record directory changes
+  add-zsh-hook chpwd _cwd::record
 }
 
 function _cwd::unhook 
