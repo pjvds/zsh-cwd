@@ -2,6 +2,13 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [1.1.0](https://github.com/pjvds/zsh-cwd/compare/7a2b33a80650b1980b8c7b439878d911d7cf8d91..1.1.0) - 2025-12-15
+#### Performance Improvements
+- don't change directory for current working directory - ([7203a05](https://github.com/pjvds/zsh-cwd/commit/7203a059d88c553d7aa9239083b4dbc3a105138a)) - [@pjvds](https://github.com/pjvds)
+- improve startup time - ([7a2b33a](https://github.com/pjvds/zsh-cwd/commit/7a2b33a80650b1980b8c7b439878d911d7cf8d91)) - [@pjvds](https://github.com/pjvds)
+
+- - -
+
 ## [1.0.1](https://github.com/pjvds/zsh-cwd/compare/1.0.0..1.0.1) - 2023-02-07
 #### Bug Fixes
 - current working directory not always loaded - ([bd775cf](https://github.com/pjvds/zsh-cwd/commit/bd775cfbd658ee4ccb0f832aff876258c41bf0e4)) - [@pjvds](https://github.com/pjvds)
