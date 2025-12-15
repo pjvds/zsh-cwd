@@ -42,7 +42,7 @@ function _cwd::record
 function _cwd::cd 
 {
   local wd="$(_cwd::get_state)"
-  if [[ $? ]]
+  if [[ $? && "$wd" != $PWD ]]
   then
     cd "$wd"
   fi
